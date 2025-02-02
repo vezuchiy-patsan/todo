@@ -1,7 +1,13 @@
-import './App.css';
+import { AppRouter } from './app/router';
+import { Menu } from './components/menu';
 
 function App() {
-	return <div className="App"></div>;
+	return (
+		<>
+			<AppRouter />
+			<Menu />
+		</>
+	);
 }
 
 export default App;

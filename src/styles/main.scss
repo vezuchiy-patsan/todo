@@ -1,0 +1,14 @@
+// Базовые стили
+@use 'base/reset.scss';
+
+// Страницы
+@use 'pages/projects.scss';
+@use 'pages/not-found.scss';
+@use 'pages/tasks.scss';
+
+// Компоненты
+@use 'components/loader.scss';
+@use 'components/error.scss';
+@use 'components/menu.scss';
+
+@use 'index.scss';
