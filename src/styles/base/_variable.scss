@@ -1,0 +1,28 @@
+:root {
+	--font-size-m: 16px;
+	--font-line-m: 24px;
+	--font-m: var(--font-size-m) / var(--font-line-m) var(--font-family-main);
+	--font-size-l: 24px;
+	--font-line-l: 32px;
+	--font-l: var(--font-size-l) / var(--font-line-l) var(--font-family-main);
+	--font-size-xl: 32px;
+	--font-line-xl: 48px;
+	--font-xl: var(--font-size-l) / var(--font-line-xl) var(--font-family-main);
+
+	// цвета
+	--black-0: #f5f5f5;
+	--black-1: #e7e7e7;
+	--black-2: #cdcdcd;
+	--black-3: #b2b2b2;
+	--black-4: #9a9a9a;
+	--black-5: #8b8b8b;
+	--black-6: #848484;
+	--black-7: #717171;
+	--black-8: #656565;
+	--black-9: #575757;
+	--black: #000;
+
+	--white-coral: #fafaf5;
+
+	--background-color-body: var(--white-coral);
+}

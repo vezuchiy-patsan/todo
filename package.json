@@ -3,6 +3,7 @@
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
+		"@redux-devtools/extension": "^3.3.0",
 		"@testing-library/jest-dom": "^5.14.1",
 		"@testing-library/react": "^13.0.0",
 		"@testing-library/user-event": "^13.2.1",
@@ -16,6 +17,7 @@
 		"react-redux": "^9.2.0",
 		"react-router": "^7.1.5",
 		"react-scripts": "^5.0.1",
+		"redux": "^5.0.1",
 		"sass": "^1.83.4",
 		"tinymce": "^7.6.1",
 		"web-vitals": "^2.1.0"

@@ -1,11 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { Provider } from 'react-redux';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router';
 import './styles/main.scss';
 import { ErrorBoundary } from './app/error-boundary';
 import { Error } from './components/error';
+import { store } from './app/store/store';
 
 const root = ReactDOM.createRoot(
 	document.getElementById('root') as HTMLElement,
@@ -13,9 +15,11 @@ const root = ReactDOM.createRoot(
 root.render(
 	<React.StrictMode>
 		<BrowserRouter>
-			<ErrorBoundary renderElement={<Error scope="app" />}>
-				<App />
-			</ErrorBoundary>
+			<Provider store={store}>
+				<ErrorBoundary renderElement={<Error scope="app" />}>
+					<App />
+				</ErrorBoundary>
+			</Provider>
 		</BrowserRouter>
 	</React.StrictMode>,
 );

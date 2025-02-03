@@ -1,5 +1,9 @@
 // Базовые стили
 @use 'base/reset.scss';
+@use 'base/_variable';
+
+// Утилиты
+@use 'utils/animations.scss';
 
 // Страницы
 @use 'pages/projects.scss';
@@ -10,5 +14,6 @@
 @use 'components/loader.scss';
 @use 'components/error.scss';
 @use 'components/menu.scss';
+@use 'components/modal.scss';
 
 @use 'index.scss';

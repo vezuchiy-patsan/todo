@@ -1,11 +1,20 @@
 .menu-container {
+	position: fixed;
+	bottom: 30px;
+	left: 50%;
+	right: 50%;
+	translate: -50% -50%;
 	display: flex;
 	background-color: black;
 	width: 300px;
 	height: 70px;
 	align-items: center;
 	justify-content: space-around;
-	border-radius: 5px;
+	border-radius: 50px;
+	@media (max-width: 425px) {
+		bottom: 0;
+		height: auto;
+	}
 	.button {
 		outline: 0 !important;
 		border: 0 !important;
@@ -26,5 +35,9 @@
 
 	img {
 		width: 32px;
+	}
+
+	@media (max-width: 425px) {
+		width: 90%;
 	}
 }
