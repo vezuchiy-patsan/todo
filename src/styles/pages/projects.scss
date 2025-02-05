@@ -3,6 +3,7 @@
 	grid-template-columns: repeat(5, auto);
 	grid-auto-rows: minmax(300px, 1fr);
 	gap: 20px;
+
 	@media (max-width: 860px) {
 		grid-template-columns: repeat(4, auto);
 	}
@@ -20,13 +21,20 @@
 		text-align: center;
 		cursor: pointer;
 		transition: transform 0.5s;
+		font-weight: bolder;
+		color: black;
+		position: relative;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: space-between;
-		font-weight: bolder;
-		color: black;
-		position: relative;
+		height: 100%;
+		a {
+			flex: 1 1 auto;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-evenly;
+		}
 		&:hover {
 			border: 1px solid black;
 			transform: scale(1.05);

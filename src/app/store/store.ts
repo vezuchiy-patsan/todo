@@ -28,7 +28,7 @@ export const store = createStore(
 
 window.addEventListener('beforeunload', () => {
 	const currentState = store.getState();
-	saveState<ReduxState>('state', {
+	saveState('state', {
 		projects: currentState.projects.projects,
 		tasks: currentState.tasks.tasks,
 	});

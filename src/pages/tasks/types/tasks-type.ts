@@ -6,7 +6,6 @@ export interface Task {
 	description: string;
 	createdAt: string; // Дата создания задачи
 	timeInWork: string; // Время в работе (в часах или минутах)
-	editTime: string;
 	finishedAt: string; // Дата окончания задачи (если задача завершена)
 	priority: PriorityType;
 	attachments: string[]; // Вложенные файлы (пути к файлам или ссылки)
@@ -25,5 +24,5 @@ export interface Comment {
 	replies: Comment[]; // Ответы на комментарий (каскадные комментарии)
 }
 
-type StatusType = 'queue' | 'development' | 'done';
-type PriorityType = 'low' | 'medium' | 'high';
+export type StatusType = 'queue' | 'development' | 'done';
+export type PriorityType = 'low' | 'medium' | 'high';

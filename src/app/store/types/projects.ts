@@ -6,6 +6,7 @@ export interface ProjectsState {
 
 export enum ProjectsActionsTypes {
 	ADD_PROJECTS = 'ADD_PROJECTS',
+	EDIT_PROJECTS = 'EDIT_PROJECTS',
 	DELETE_PROJECTS = 'DELETE_PROJECTS',
 }
 
@@ -14,9 +15,17 @@ interface AddProjectAction {
 	payload: Project;
 }
 
+interface EditProjectAction {
+	type: ProjectsActionsTypes.EDIT_PROJECTS;
+	payload: Project;
+}
+
 interface DeleteProjectAction {
 	type: ProjectsActionsTypes.DELETE_PROJECTS;
 	payload: string;
 }
 
-export type ProjectsAction = AddProjectAction | DeleteProjectAction;
+export type ProjectsAction =
+	| AddProjectAction
+	| EditProjectAction
+	| DeleteProjectAction;

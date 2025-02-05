@@ -1,19 +1,21 @@
 // Базовые стили
-@use 'base/reset.scss';
+@use 'base/reset';
 @use 'base/_variable';
 
 // Утилиты
-@use 'utils/animations.scss';
+@use 'utils/animations';
+@use 'utils/form';
+@use 'utils/radio';
 
 // Страницы
-@use 'pages/projects.scss';
-@use 'pages/not-found.scss';
-@use 'pages/tasks.scss';
+@use 'pages/projects';
+@use 'pages/not-found';
+@use 'pages/tasks';
 
 // Компоненты
-@use 'components/loader.scss';
-@use 'components/error.scss';
-@use 'components/menu.scss';
-@use 'components/modal.scss';
+@use 'components/loader';
+@use 'components/error';
+@use 'components/menu';
+@use 'components/modal';
 
-@use 'index.scss';
+@use 'index';
