@@ -3,5 +3,4 @@ export interface Project {
 	title: string;
 	description: string;
 	createdAt: string;
-	countTasks: number;
 }

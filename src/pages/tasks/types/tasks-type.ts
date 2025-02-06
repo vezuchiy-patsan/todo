@@ -1,3 +1,5 @@
+import { CommentType } from '../../../components/comment/types/types';
+
 export interface Task {
 	id: string;
 	numberTask: number;
@@ -8,20 +10,15 @@ export interface Task {
 	timeInWork: string; // Время в работе (в часах или минутах)
 	finishedAt: string; // Дата окончания задачи (если задача завершена)
 	priority: PriorityType;
-	attachments: string[]; // Вложенные файлы (пути к файлам или ссылки)
+	attachments: FileInfo[]; // Вложенные файлы (пути к файлам или ссылки)
 	status: StatusType;
-	subtasks: Task[];
-	comments: Comment[];
+	comments: CommentType[];
 }
 
-export interface Comment {
-	id: string;
-	author: string; // Автор комментария
-	text: string; // Текст комментария
-	createdAt: Date; // Дата создания комментария
-	repliedId: string | null;
-	taskId: string;
-	replies: Comment[]; // Ответы на комментарий (каскадные комментарии)
+export interface FileInfo {
+	name: string;
+	size: number;
+	type: string;
 }
 
 export type StatusType = 'queue' | 'development' | 'done';

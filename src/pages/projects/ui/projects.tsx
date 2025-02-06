@@ -21,7 +21,6 @@ function ProjectsPage() {
 		title: '',
 		description: '',
 		createdAt: '',
-		countTasks: 0,
 	});
 
 	const openModal = () => setIsModalOpen((prev) => !prev);
@@ -31,7 +30,6 @@ function ProjectsPage() {
 			title: '',
 			description: '',
 			createdAt: '',
-			countTasks: 0,
 		});
 	const closeModal = useCallback(
 		() => setIsModalOpen(() => false),
@@ -68,7 +66,6 @@ function ProjectsPage() {
 
 			const newObj: Project = {
 				id: newId.toString(),
-				countTasks: project.countTasks,
 				createdAt: dayjs().format('YYYY-MM-DD'),
 				title: project.title,
 				description: project.description,
@@ -119,9 +116,7 @@ function ProjectsPage() {
 									от {card.createdAt}
 								</div>
 								<div className="project_container_card_name">{card.title}</div>
-								<div className="project_container_card_count">
-									({card.countTasks})
-								</div>
+								<div className="project_container_card_count"></div>
 							</NavLink>
 						</div>
 					))}

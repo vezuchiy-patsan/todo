@@ -8,7 +8,6 @@ import tasksReducer from './reducers/tasksReducers';
 import { ProjectsState } from './types/projects';
 import { TasksState } from './types/tasks';
 import { saveState } from '../../utils/localStorage/localStorage';
-import tasks from '../../pages/tasks/ui/tasks';
 
 export interface ReduxState extends ProjectsState, TasksState {}
 
@@ -20,10 +19,7 @@ const rootReducer = combineReducers({
 export const store = createStore(
 	rootReducer,
 	{},
-	composeWithDevTools(
-		applyMiddleware(),
-		// other store enhancers if any
-	),
+	composeWithDevTools(applyMiddleware()),
 );
 
 window.addEventListener('beforeunload', () => {

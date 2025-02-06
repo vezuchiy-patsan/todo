@@ -12,7 +12,9 @@ export const Error = memo((props: PageErrorProps) => {
 	return (
 		<div className={`errorWrapper`}>
 			<p>Что-то случилось!!! Инфо: {props.scope}</p>
-			<button onClick={handleReload}>Перезагрузить</button>
+			<button onClick={handleReload} style={{ cursor: 'pointer' }}>
+				Перезагрузить
+			</button>
 		</div>
 	);
 });

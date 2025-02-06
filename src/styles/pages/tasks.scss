@@ -17,6 +17,17 @@
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+@media (max-width: 768px) {
+	.board {
+		width: 100%; 
+		padding: 10px;
+		justify-content: flex-start;
+	}
+
+	.column {
+		flex: 0 0 300px; 
+	}
+}
 .column-header {
 	display: flex;
 	justify-content: space-between;
@@ -40,6 +51,7 @@
 
 .card {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
 	background: white;
@@ -49,6 +61,23 @@
 	cursor: pointer;
 	button {
 		cursor: pointer;
+	}
+	.notificate-alert {
+		flex: 1 1 100%;
+		line-height: 21px;
+		max-height: 50px;
+		background-color: #ffbe27;
+		padding: 6px 16px;
+		border-radius: 5px;
+	}
+	.comment-link {
+		flex: 1 1 100%;
+		line-height: 21px;
+		color: var(--black-4);
+		&:hover {
+			color: var(--black-8);
+			transition: color 0.3s;
+		}
 	}
 }
 
@@ -60,4 +89,53 @@
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 	font-size: 14px;
 	cursor: text;
+}
+
+.dropzone {
+	border: 2px dashed #ddd; 
+	padding: 20px;
+	width: 100%;
+	max-width: 600px;
+	margin: 20px auto;
+	text-align: center;
+	cursor: pointer;
+	background-color: #f9f9f9; 
+	border-radius: 8px;
+	transition:
+		border-color 0.3s,
+		background-color 0.3s;
+}
+
+
+.dropzone p {
+	font-size: 16px;
+	color: #888;
+}
+
+
+.dropzone.dragover {
+	border-color: #007bff; 
+	background-color: #e7f1ff; 
+}
+
+.dropzone:hover {
+	border-color: #0056b3; 
+	background-color: #f1f9ff; 
+}
+
+.file-preview {
+	margin-top: 10px;
+	font-size: 14px;
+	color: #333;
+	word-break: break-word;
+	li {
+		margin-bottom: 5px;
+	}
+}
+
+
+
+.error-message {
+	color: red;
+	font-size: 14px;
 }

@@ -9,7 +9,7 @@ interface ModalProps {
 }
 
 export const Modal = memo(({ isOpen, onClose, children }: ModalProps) => {
-	if (!isOpen) return null; // Если модальное окно закрыто, не рендерим его
+	if (!isOpen) return null;
 
 	const handleOverlayClick = (e: React.MouseEvent) => {
 		if (e.target === e.currentTarget) {
