@@ -46,7 +46,12 @@ export function TaskComponent({
 				{!areAllChecked(task.description) && task.status === 'done' && (
 					<div className="notificate-alert">Не все подзадачи закрыты!</div>
 				)}
-				<div>{task.title}</div>
+				<div className="main-section">
+					<div>
+						#{task.numberTask} {task.title}
+					</div>
+					<div className={`main-section-line-priority-${task.priority}`}></div>
+				</div>
 				<button
 					onClick={(e) => {
 						e.stopPropagation();
@@ -66,10 +71,7 @@ export function TaskComponent({
 				</div>
 			</div>
 			<Modal isOpen={isModalOpen} onClose={closeModal}>
-				<CommentSystem
-					idTask={`comment-system-${task.id}`}
-					projectId={task.projectId}
-				/>
+				<CommentSystem idTask={task.id} projectId={task.projectId} />
 			</Modal>
 		</>
 	);

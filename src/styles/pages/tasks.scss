@@ -19,13 +19,13 @@
 
 @media (max-width: 768px) {
 	.board {
-		width: 100%; 
+		width: 100%;
 		padding: 10px;
 		justify-content: flex-start;
 	}
 
 	.column {
-		flex: 0 0 300px; 
+		flex: 0 0 300px;
 	}
 }
 .column-header {
@@ -53,13 +53,14 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	align-items: center;
+	align-items: stretch;
 	background: white;
 	padding: 10px;
 	border-radius: 6px;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 	cursor: pointer;
 	button {
+		flex: 1 1 1%;
 		cursor: pointer;
 	}
 	.notificate-alert {
@@ -79,6 +80,29 @@
 			transition: color 0.3s;
 		}
 	}
+	.main-section {
+		display: flex;
+		justify-content: space-between;
+		flex: 1 1 85%;
+		.main-section-line-priority-low {
+			width: 5px;
+			border-radius: 50px;
+			background-color: var(--low-priority);
+			margin-right: 10px;
+		}
+		.main-section-line-priority-medium {
+			width: 5px;
+			border-radius: 50px;
+			background-color: var(--med-priority);
+			margin-right: 10px;
+		}
+		.main-section-line-priority-high {
+			width: 5px;
+			border-radius: 50px;
+			background-color: var(--high-priority);
+			margin-right: 10px;
+		}
+	}
 }
 
 .input-card {
@@ -92,35 +116,33 @@
 }
 
 .dropzone {
-	border: 2px dashed #ddd; 
+	border: 2px dashed #ddd;
 	padding: 20px;
 	width: 100%;
 	max-width: 600px;
 	margin: 20px auto;
 	text-align: center;
 	cursor: pointer;
-	background-color: #f9f9f9; 
+	background-color: #f9f9f9;
 	border-radius: 8px;
 	transition:
 		border-color 0.3s,
 		background-color 0.3s;
 }
 
-
 .dropzone p {
 	font-size: 16px;
 	color: #888;
 }
 
-
 .dropzone.dragover {
-	border-color: #007bff; 
-	background-color: #e7f1ff; 
+	border-color: #007bff;
+	background-color: #e7f1ff;
 }
 
 .dropzone:hover {
-	border-color: #0056b3; 
-	background-color: #f1f9ff; 
+	border-color: #0056b3;
+	background-color: #f1f9ff;
 }
 
 .file-preview {
@@ -132,8 +154,6 @@
 		margin-bottom: 5px;
 	}
 }
-
-
 
 .error-message {
 	color: red;

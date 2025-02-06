@@ -35,13 +35,13 @@
 
 .radio-inputs .radio input:checked {
 	&[value='low'] + .name {
-		background-color: #00ff22;
+		background-color: var(--low-priority);
 	}
 	&[value='medium'] + .name {
-		background-color: #fbff00;
+		background-color: var(--med-priority);
 	}
 	&[value='high'] + .name {
-		background-color: #ff1616;
+		background-color: var(--high-priority);
 		color: #fff;
 	}
 	& + .name {
